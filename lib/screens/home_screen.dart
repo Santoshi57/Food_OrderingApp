@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/constants.dart';
 
+import 'components/menu.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -21,17 +23,22 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               children: [
                 Container(
-                    padding: EdgeInsets.all(kPadding),
-                    constraints:BoxConstraints(maxWidth:kMaxWidth),
-                  child: Column(
+                    padding: const EdgeInsets.all(kPadding),
+                    constraints:const BoxConstraints(maxWidth:kMaxWidth),
+                  child: const Column(
                     children: [
                       Row(
                         children: [
                           Text("Foodie",style:TextStyle(fontSize:20.0,
                           fontWeight: FontWeight.bold,
-                          color: kSecondaryColor),)
+                          color: kSecondaryColor),),
+                          Spacer(),
+                          HeaderWebMenu(),
+
+
                         ],
-                      )
+                      ),
+
                     ],
                   ),
                 )
